@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Site de Música</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(120deg, #111, #2b1055);
+            color: white;
+        }
+
+        header {
+            background: #6a0dad;
+            padding: 25px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        nav {
+            background: #3a0a66;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ffccff;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.08);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+
+        .card h2 {
+            color: #ffccff;
+        }
+
+        .botao {
+            background: #6a0dad;
+            border: none;
+            padding: 10px 15px;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .botao:hover {
+            background: #9b30ff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #000;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🎵 Mundo da Música</h1>
+    <p>Site criado por Isabely</p>
+</header>
+
+<nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#generos">Gêneros</a>
+    <a href="#curiosidades">Curiosidades</a>
+</nav>
+
+<div class="container">
+
+    <div class="card" id="sobre">
+        <h2>🎶 Sobre a Música</h2>
+        <p>
+            A música é uma forma de arte que combina sons e silêncio para expressar emoções,
+            ideias e histórias. Ela está presente em todas as culturas do mundo.
+        </p>
+    </div>
+
+    <div class="card" id="generos">
+        <h2>🎧 Gêneros Musicais</h2>
+        <ul>
+            <li>Pop</li>
+            <li>Rock</li>
+            <li>Funk</li>
+            <li>Sertanejo</li>
+            <li>Rap</li>
+            <li>K-pop</li>
+        </ul>
+    </div>
+
+    <div class="card" id="curiosidades">
+        <h2>✨ Curiosidades</h2>
+        <p>
+            A música pode ajudar no foco, melhorar o humor e até reduzir o estresse.
+        </p>
+
+        <button class="botao" onclick="tocar()">Tocar Música</button>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 - Site de Música feito por Isabely 🎵</p>
+</footer>
+
+<audio id="musica">
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+</audio>
+
+<script>
+    function tocar() {
+        document.getElementById("musica").play();
+    }
+</script>
+
+</body>
+</html>
